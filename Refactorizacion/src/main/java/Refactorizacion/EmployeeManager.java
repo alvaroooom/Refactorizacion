@@ -38,15 +38,4 @@ public class EmployeeManager {
             System.out.println(employee);
         }
     }
-
-    /**
-     * Método principal para probar la funcionalidad.
-     * @param args Argumentos de la línea de comandos.
-     */
-    public static void main(String[] args) {
-        EmployeeManager manager = new EmployeeManager();
-        manager.addEmployee("John Doe", 5);
-        manager.addEmployee("Jane Smith", 2);
-        manager.printEmployees();
-    }
 }
