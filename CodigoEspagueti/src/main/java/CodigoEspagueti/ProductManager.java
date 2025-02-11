@@ -3,15 +3,29 @@ package CodigoEspagueti;
 import java.util.ArrayList;
 import java.util.List;
 
-// Clase que gestiona los productos
+/**
+ * Gestiona la lista de productos
+ * @author Álvaro
+ */
+
 public class ProductManager {
     private List<Product> products;
 
+    /**
+     * Constructor de la clase ProductManager.
+     * Inicializa la lista de productos.
+     */
+    
     public ProductManager() {
         this.products = new ArrayList<>();
     }
 
-    // Agrega un producto a la lista
+    /**
+     * Agrega un nuevo producto a la lista.
+     * @param name Nombre del producto.
+     * @param price Precio del producto.
+     */
+    
     public void addProduct(String name, double price) {
         try {
             Product product = new Product(name, price);
@@ -21,8 +35,11 @@ public class ProductManager {
             System.out.println("Error al agregar producto: " + e.getMessage());
         }
     }
+    
+    /**
+     * Lista todos los productos
+     */
 
-    // Listar todos los productos
     public void listProducts() {
         if (products.isEmpty()) {
             System.out.println("No hay productos para listar.");
@@ -33,7 +50,11 @@ public class ProductManager {
         }
     }
 
-    // Buscar un producto por su nombre
+    /**
+     * Obtiene el nombre del producto.
+     * @param searchName Busca el nombre del producto
+     */
+    
     public void findProduct(String searchName) {
         Product foundProduct = products.stream()
             .filter(product -> product.getName().equalsIgnoreCase(searchName))

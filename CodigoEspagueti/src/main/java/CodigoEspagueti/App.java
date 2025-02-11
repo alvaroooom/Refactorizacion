@@ -9,19 +9,19 @@ package CodigoEspagueti;
 
 public class App 
 {
-	/*
+	/**
 	 * Método principal para probar la funcionalidad
-	 * @param Argumentos de la línea de comandos
+	 * @param args Argumentos de la línea de comandos
 	 */
 
 	public static void main(String[] args) {
         ProductManager manager = new ProductManager();
         
         // Para añadirt productos
-        manager.addProduct("Monitor", 250);
-        manager.addProduct("Teclado", 50);
-        manager.addProduct("Mouse", 25);
-        manager.addProduct("Impresora", 150);
+        manager.addProduct("Monitor", 250.75);
+        manager.addProduct("Teclado", 50.99);
+        manager.addProduct("Mouse", 29.99);
+        manager.addProduct("Impresora", 150.02);
 
         // Para listar productos
         manager.listProducts();
